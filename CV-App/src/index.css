@@ -5,10 +5,12 @@
 }
 
 body {
-  max-width: 65vw;
+  max-width: 60vw;
   margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #root {
   background-color: lavender;
+  padding: 20px;
 }
