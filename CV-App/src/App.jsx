@@ -3,6 +3,7 @@ import './App.css'
 import About from './components/About'
 import EdInfo from './components/EdInfo'
 import WorkInfo from './components/WorkInfo'
+import Header from './components/Header'
 
 function App() {
 
@@ -10,10 +11,11 @@ function App() {
 
   return (
     <>
+      <Header isEditable={isEditable}/>
       <About isEditable={isEditable}/>
       <EdInfo isEditable={isEditable}/>
       <WorkInfo isEditable={isEditable}/>
-      <button onClick={() => setIsEditable(!isEditable)}>{isEditable ? "Update" : "Edit"}</button>
+      <button type='button' onClick={() => setIsEditable(!isEditable)}>{isEditable ? "Update" : "Edit"}</button>
     </>
   )
 }

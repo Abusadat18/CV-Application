@@ -4,13 +4,8 @@ import '../styles/edinfo.css'
 function EdInfo({isEditable}) {
 
     const [eduInfos, setEduInfos] = useState([
-         {
-            id: Date.now(),
-            courseName: "Btech",
-            schoolName: "University of Engineering & Management",
-            duration: "2022-26"
-         }
-        ])
+         {id: 1,},{id: 2}
+        ]) 
 
     const updateEduInfos =(prev,currItem,field,e) => (
          prev.map((prevItem) => prevItem.id === currItem.id ? {...prevItem, [field]: e.target.value} : prevItem )
@@ -26,14 +21,14 @@ function EdInfo({isEditable}) {
                     {isEditable ? 
                     <>
                     <input type="text" 
-                           placeholder='Course/Class/Degree' 
+                           placeholder='Course / Class / Degree' 
                            value={currItem.courseName} 
                            onChange={(e) => setEduInfos((prev) => (updateEduInfos(prev, currItem, "courseName",e)))} />
                     <input type="text" 
-                           placeholder='Institute/School/University'
+                           placeholder='Institute / School / University'
                            value={currItem.schoolName}
                            onChange={(e) => setEduInfos((prev) => (updateEduInfos(prev,currItem,"schoolName",e)))} />
-                    <input type="number"
+                    <input type="text"
                            placeholder='Duration e.g-2022-26'
                            value={currItem.duration}
                            onChange={(e) => setEduInfos((prev) => (updateEduInfos(prev,currItem,"duration",e)))} />
@@ -47,6 +42,7 @@ function EdInfo({isEditable}) {
                     }
                 </div>)}
         </div>
+        {isEditable ? <button className='ed-add-btn' onClick={() => setEduInfos([...eduInfos,{id: Date.now()}])}>Add more</button> : null }
     </div>
   )
 }

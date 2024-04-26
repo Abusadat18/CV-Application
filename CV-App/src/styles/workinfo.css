@@ -7,9 +7,14 @@
 .work-cardsContainer {
     display: flex;
     flex-direction: column;
+    gap: 25px;
 }
 
 .work-card {
     display: flex;
     flex-direction: column;
+}
+
+.work-add-btn {
+    justify-self: start;
 }
