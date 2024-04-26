@@ -3,7 +3,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="container">
+    <div className="about-ctn">
         <h2 className="name">Abu Sadat Ansari</h2>
         <div className="info">
             <p className="email">itssadatansari@gmail.com</p>

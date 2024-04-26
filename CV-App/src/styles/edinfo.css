@@ -1,0 +1,19 @@
+.ed-ctn {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.ed-cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.ed-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.ed-courseName {
+    font-weight: bold;
+}
