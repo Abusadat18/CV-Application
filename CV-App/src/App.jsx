@@ -13,7 +13,7 @@ function App() {
       <About isEditable={isEditable}/>
       <EdInfo isEditable={isEditable}/>
       <WorkInfo isEditable={isEditable}/>
-      <p onClick={() => setIsEditable(!isEditable)}>{isEditable ? "Update" : "Edit"}</p>
+      <button onClick={() => setIsEditable(!isEditable)}>{isEditable ? "Update" : "Edit"}</button>
     </>
   )
 }
