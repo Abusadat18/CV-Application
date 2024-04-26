@@ -5,12 +5,20 @@
 }
 
 body {
-  max-width: 60vw;
-  margin: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
 #root {
   background-color: lavender;
   padding: 20px;
+  max-width: 60vw;
+  margin: auto;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: inherit;
 }
